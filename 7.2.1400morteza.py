@@ -2,7 +2,7 @@ import random
 A="123456789"
 make=list()
 i=0
-while i<len(A):
+while i<len(A): #Divide a string into a combination of numbers in a list called "make"
     j=len(A)
     make2=list()
     while j>i:
@@ -21,16 +21,16 @@ make[5].reverse()
 make[6].reverse()
 make[7].reverse()
 make[8].reverse()
-print(make)
+print(make) #Test to see what's inside the Make
 i=0
-def app(A):
+def app(A): #Add a sorted list to another list called B.
     C=list()
     i=0
     while i<len(A):
         C.append(A[i])
         i+=1
     return C
-def sort(make,A,B,i):
+def sort(make,A,B,i): #Sort the list and create a sorted list(Read the readme file for a better understanding)
     if i>=9:
         B.append(app(A))
         return   
@@ -98,7 +98,7 @@ def sort(make,A,B,i):
         A.pop()    
         return
          
-def sum(A):
+def sum(A): #Gather the members of the sorted list from the appropriate combinations 0 to 9
     i=0
     sum1=0
     while i<len(B) :
@@ -116,10 +116,3 @@ B=list()
 
 sort(make,A,B,0)
 sum(B)
-       
-
-        
-
-
-    
-
